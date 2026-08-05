@@ -6,7 +6,7 @@
     <title>Intent Computer</title>
     <meta
       name="description"
-      content="Intent Computer is a small Linux computer built around a voice-operated command line, with Intent Remote for computers you already own."
+      content="Intent Computer is a small Linux computer built around a voice-operated command line, with Intent Computer Mini for computers and devices you already own."
     />
     <meta property="og:title" content="Intent Computer" />
     <meta
@@ -39,7 +39,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#computer">Computer</a>
-        <a href="#remote">Remote</a>
+        <a href="#mini">Mini</a>
         <a href="#roots">Story</a>
       </nav>
       <a class="nav-cta" href="#contact">I want one</a>
@@ -274,27 +274,30 @@
       </section>
 
       <section
-        class="section remote-section motion-zone"
-        id="remote"
-        aria-labelledby="remote-title"
+        class="section mini-section motion-zone"
+        id="mini"
+        aria-labelledby="mini-title"
         data-motion-zone
       >
         <div
-          class="remote-visual motion-layer"
+          class="mini-visual motion-layer"
           data-reveal
           data-parallax-speed="10"
           aria-hidden="true"
         >
-          <div class="remote-phone motion-layer" data-parallax-speed="-10">
-            <span class="phone-speaker"></span>
-            <span class="phone-screen command"></span>
-            <span class="phone-screen approve"></span>
-            <span class="phone-screen mouse"></span>
-            <span class="phone-wave"></span>
-          </div>
-          <div class="remote-device motion-layer" data-parallax-speed="8">
-            <span></span>
-          </div>
+          <picture class="mini-media">
+            <source
+              srcset="assets/intent-computer-mini.webp"
+              type="image/webp"
+            />
+            <img
+              src="assets/intent-computer-mini.png"
+              alt=""
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </picture>
           <div class="bluetooth-line"></div>
           <div class="signal-packets">
             <span></span>
@@ -303,26 +306,23 @@
           </div>
         </div>
         <div class="section-copy" data-reveal>
-          <p class="section-kicker">Intent Remote</p>
-          <h2 id="remote-title">
-            The same idea for a computer you already own.
-          </h2>
+          <p class="section-kicker">Intent Computer Mini</p>
+          <h2 id="mini-title">A tiny computer that carries your intent.</h2>
           <p>
-            Intent Remote comes in two forms: an Android app and a standalone
-            device small enough to sit beside your mouse. Both pair with another
-            computer over Bluetooth and appear as a normal keyboard and mouse.
+            Intent Computer Mini is a pocket-sized intent computer that sits
+            beside the hardware you already use. It pairs over Bluetooth and
+            appears as a normal keyboard and mouse to anything it can control.
           </p>
           <p>
-            Nothing needs to be installed on the computer being controlled.
-            Speak a request, review the transcript and the proposed commands,
-            then press Execute.
+            Nothing needs to be installed on the controlled computer or device.
+            Speak a request, review the transcript and the proposed commands on
+            the Mini, then press Execute.
           </p>
           <p>
-            Intent Remote can type text, enter terminal commands, use keyboard
-            shortcuts, move through menus, and launch applications. The phone or
-            standalone device handles the voice input and keeps your provider
-            credentials; the other computer receives ordinary keyboard and mouse
-            actions.
+            Intent Computer Mini can type text, enter terminal commands, use
+            keyboard shortcuts, move through menus, and launch applications. It
+            handles the voice input and keeps your provider credentials; the
+            other machine receives ordinary keyboard and mouse actions.
           </p>
         </div>
       </section>
@@ -360,7 +360,7 @@
             style="--accent: #2d9b72; --delay: 170ms"
           >
             <p class="panel-label">Bridge hardware</p>
-            <h3>Intent Remote</h3>
+            <h3>Intent Computer Mini</h3>
             <p>
               Adds the same voice-and-intent interface to hardware you already
               have.
@@ -403,7 +403,7 @@
             <span>Dissenter</span>
             <p>
               The original Android and standalone voice-command devices behind
-              Intent Remote.
+              Intent Computer Mini.
             </p>
           </li>
           <li data-reveal style="--delay: 270ms">
@@ -414,11 +414,10 @@
           </li>
         </ol>
         <p class="roots-after" data-reveal>
-          The first pieces already work. The Android app can turn spoken
-          requests into reviewed Bluetooth commands. The standalone unit does
-          the same from a pocket-sized device. Current hardware experiments
-          explore what happens when the computer itself is built around that
-          interaction.
+          The first pieces already work. Intent Computer Mini can turn spoken
+          requests into reviewed Bluetooth commands from a pocket-sized device.
+          Current hardware experiments explore what happens when the computer
+          itself is built around that interaction.
         </p>
       </section>
 

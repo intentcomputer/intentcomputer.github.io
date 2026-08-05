@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Intent Computer">
+  <rect width="64" height="64" rx="14" fill="#17212b"/>
+  <path d="M17 22h30" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M17 32h30" stroke="#f28461" stroke-width="5" stroke-linecap="round"/>
+  <path d="M17 42h30" stroke="#2d9b72" stroke-width="5" stroke-linecap="round"/>
+</svg>

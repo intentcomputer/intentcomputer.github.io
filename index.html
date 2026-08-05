@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intent Computer</title>
+    <meta
+      name="description"
+      content="Intent Computer is a small Linux computer built around a voice-operated command line, with Intent Remote for computers you already own."
+    />
+    <meta property="og:title" content="Intent Computer" />
+    <meta
+      property="og:description"
+      content="Start with the thing you actually want done. Intent Computer turns spoken requests into reviewed, approved computer actions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/intent-computer-hero.png" />
+    <meta name="theme-color" content="#fff8eb" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/intent-computer-hero.webp"
+      type="image/webp"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-meter" aria-hidden="true">
+      <span id="scrollMeter"></span>
+    </div>
+
+    <header class="site-nav" data-reveal="down">
+      <a class="brand" href="#top" aria-label="Intent Computer home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+        </span>
+        Intent Computer
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#computer">Computer</a>
+        <a href="#remote">Remote</a>
+        <a href="#roots">Story</a>
+      </nav>
+      <a class="nav-cta" href="#contact">I want one</a>
+    </header>
+
+    <main id="top">
+      <section
+        class="hero motion-zone"
+        aria-labelledby="hero-title"
+        data-motion-zone
+      >
+        <picture
+          class="hero-media motion-layer"
+          aria-hidden="true"
+          data-parallax-speed="-18"
+        >
+          <source srcset="assets/intent-computer-hero.webp" type="image/webp" />
+          <img
+            src="assets/intent-computer-hero.png"
+            alt=""
+            width="1536"
+            height="1024"
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="intent-packets" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="voice-path hero-path" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hero-content" data-reveal>
+          <p class="section-kicker">Voice-operated Linux</p>
+          <h1 id="hero-title">Intent Computer</h1>
+          <p class="hero-lede">Tell it what you want to do.</p>
+          <p class="hero-copy">
+            Most computers make you find the right app and work out every step
+            yourself. Intent Computer starts with the thing you actually want
+            done.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">I want one</a>
+            <a class="button secondary" href="#partner"
+              >Partner with Intent Computer</a
+            >
+          </div>
+          <div class="hero-command" aria-hidden="true">
+            <span class="prompt-symbol">$</span>
+            <span class="typed-text"
+              >open the latest photo and install an editor if needed</span
+            >
+            <span class="cursor-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section intro-section motion-zone"
+        id="idea"
+        aria-labelledby="idea-title"
+        data-motion-zone
+      >
+        <div class="section-copy" data-reveal>
+          <p class="section-kicker">Start With Intent</p>
+          <h2 id="idea-title">Begin with the job, not the app.</h2>
+          <p>
+            Say you need to edit a photograph. It can find the file, check what
+            software is available, install something if necessary, and open the
+            editor.
+          </p>
+          <p>
+            When you close the editor, you return to the command line. The
+            graphical interface appears when it is useful. It does not need to
+            run all day.
+          </p>
+        </div>
+        <div class="flow-stack">
+          <div class="flow-progress" aria-hidden="true"><span></span></div>
+          <article
+            class="flow-card"
+            data-reveal
+            style="--accent: #1684c7; --delay: 60ms"
+          >
+            <span class="flow-number">01</span>
+            <h3>Say the job</h3>
+            <p>Describe what you are trying to accomplish in ordinary words.</p>
+          </article>
+          <article
+            class="flow-card"
+            data-reveal
+            style="--accent: #f28461; --delay: 140ms"
+          >
+            <span class="flow-number">02</span>
+            <h3>Review the plan</h3>
+            <p>
+              See the commands, files, permissions, and tools it intends to use.
+            </p>
+          </article>
+          <article
+            class="flow-card"
+            data-reveal
+            style="--accent: #2d9b72; --delay: 220ms"
+          >
+            <span class="flow-number">03</span>
+            <h3>Approve action</h3>
+            <p>
+              Sensitive steps wait for your approval before software or files
+              change.
+            </p>
+          </article>
+          <article
+            class="flow-card"
+            data-reveal
+            style="--accent: #d9a431; --delay: 300ms"
+          >
+            <span class="flow-number">04</span>
+            <h3>Return light</h3>
+            <p>
+              Close the app and the machine settles back into a lightweight CLI.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section computer-section motion-zone"
+        id="computer"
+        aria-labelledby="computer-title"
+        data-motion-zone
+      >
+        <div class="section-heading" data-reveal>
+          <p class="section-kicker">Intent Computer</p>
+          <h2 id="computer-title">
+            A small Linux computer built around a voice-operated command line.
+          </h2>
+          <p>
+            You describe the job. It works out the commands and shows you what
+            it plans to do. Anything sensitive, such as installing software,
+            changing files, or using administrator access, requires your
+            approval.
+          </p>
+        </div>
+
+        <div class="review-console" data-reveal aria-hidden="true">
+          <div class="console-top">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>review before execute</strong>
+          </div>
+          <div class="console-body">
+            <p class="console-line line-one">
+              <span>transcript</span> install a photo editor and load the latest
+              image
+            </p>
+            <p class="console-line line-two">
+              <span>plan</span> find image -> check apps -> install if needed ->
+              open editor
+            </p>
+            <p class="console-line line-three">
+              <span>approval</span> one software install requires confirmation
+            </p>
+          </div>
+          <div class="approval-rail">
+            <span>Find file</span>
+            <span>Check tools</span>
+            <span>Ask approval</span>
+            <span>Open app</span>
+          </div>
+        </div>
+
+        <div class="task-grid">
+          <article class="task-card" data-reveal style="--delay: 40ms">
+            <span class="task-icon" aria-hidden="true">Doc</span>
+            <h3>Open and annotate</h3>
+            <p>
+              Open a document and let you annotate it without hunting for the
+              right app.
+            </p>
+          </article>
+          <article class="task-card" data-reveal style="--delay: 100ms">
+            <span class="task-icon" aria-hidden="true">Img</span>
+            <h3>Edit the latest image</h3>
+            <p>
+              Install a photo editor if needed, load the latest image, and hand
+              you control.
+            </p>
+          </article>
+          <article class="task-card" data-reveal style="--delay: 160ms">
+            <span class="task-icon" aria-hidden="true">Run</span>
+            <h3>Write and run code</h3>
+            <p>
+              Build a small program, run it, and show the result from the same
+              flow.
+            </p>
+          </article>
+          <article class="task-card" data-reveal style="--delay: 220ms">
+            <span class="task-icon" aria-hidden="true">Find</span>
+            <h3>Find files naturally</h3>
+            <p>
+              Find a file without remembering where you saved it or what it was
+              called.
+            </p>
+          </article>
+          <article class="task-card" data-reveal style="--delay: 280ms">
+            <span class="task-icon" aria-hidden="true">Tool</span>
+            <h3>Make a quick interface</h3>
+            <p>
+              Build a simple graphical tool when a task deserves its own
+              surface.
+            </p>
+          </article>
+          <article
+            class="task-card still-linux"
+            data-reveal
+            style="--delay: 340ms"
+          >
+            <span class="task-icon" aria-hidden="true">CLI</span>
+            <h3>Still Linux</h3>
+            <p>
+              You can type commands, inspect the system, change the software,
+              and use it as an ordinary computer.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section remote-section motion-zone"
+        id="remote"
+        aria-labelledby="remote-title"
+        data-motion-zone
+      >
+        <div
+          class="remote-visual motion-layer"
+          data-reveal
+          data-parallax-speed="10"
+          aria-hidden="true"
+        >
+          <div class="remote-phone motion-layer" data-parallax-speed="-10">
+            <span class="phone-speaker"></span>
+            <span class="phone-screen command"></span>
+            <span class="phone-screen approve"></span>
+            <span class="phone-screen mouse"></span>
+            <span class="phone-wave"></span>
+          </div>
+          <div class="remote-device motion-layer" data-parallax-speed="8">
+            <span></span>
+          </div>
+          <div class="bluetooth-line"></div>
+          <div class="signal-packets">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="section-copy" data-reveal>
+          <p class="section-kicker">Intent Remote</p>
+          <h2 id="remote-title">
+            The same idea for a computer you already own.
+          </h2>
+          <p>
+            Intent Remote comes in two forms: an Android app and a standalone
+            device small enough to sit beside your mouse. Both pair with another
+            computer over Bluetooth and appear as a normal keyboard and mouse.
+          </p>
+          <p>
+            Nothing needs to be installed on the computer being controlled.
+            Speak a request, review the transcript and the proposed commands,
+            then press Execute.
+          </p>
+          <p>
+            Intent Remote can type text, enter terminal commands, use keyboard
+            shortcuts, move through menus, and launch applications. The phone or
+            standalone device handles the voice input and keeps your provider
+            credentials; the other computer receives ordinary keyboard and mouse
+            actions.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section together-section motion-zone"
+        id="together"
+        aria-labelledby="together-title"
+        data-motion-zone
+      >
+        <div class="section-heading narrow" data-reveal>
+          <p class="section-kicker">How They Fit Together</p>
+          <h2 id="together-title">
+            Two ways to make the computer meet you at the task.
+          </h2>
+          <p>
+            Use it with a laptop, desktop, tablet, terminal, television, or
+            anything else that accepts a Bluetooth keyboard.
+          </p>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-beam" aria-hidden="true"><span></span></div>
+          <article
+            class="compare-panel"
+            data-reveal
+            style="--accent: #1684c7; --delay: 80ms"
+          >
+            <p class="panel-label">Complete machine</p>
+            <h3>Intent Computer</h3>
+            <p>A complete computer designed to work this way from startup.</p>
+          </article>
+          <article
+            class="compare-panel"
+            data-reveal
+            style="--accent: #2d9b72; --delay: 170ms"
+          >
+            <p class="panel-label">Bridge hardware</p>
+            <h3>Intent Remote</h3>
+            <p>
+              Adds the same voice-and-intent interface to hardware you already
+              have.
+            </p>
+          </article>
+        </div>
+        <p class="center-note" data-reveal>
+          Both let you begin with the job instead of hunting through apps. Both
+          show you what they intend to do before they do it.
+        </p>
+      </section>
+
+      <section
+        class="section roots-section motion-zone"
+        id="roots"
+        aria-labelledby="roots-title"
+        data-motion-zone
+      >
+        <div class="roots-copy" data-reveal>
+          <p class="section-kicker">Built Over Time</p>
+          <h2 id="roots-title">This has been building for a while.</h2>
+          <p>
+            Intent Computer grew out of earlier projects that tested web-based
+            operating environments, Android assistants, Bluetooth command
+            devices, and agent systems.
+          </p>
+        </div>
+        <ol class="roots-timeline">
+          <li data-reveal style="--delay: 60ms">
+            <span>Agent1c</span>
+            <p>An experimental web-based operating environment.</p>
+          </li>
+          <li data-reveal style="--delay: 130ms">
+            <span>Hitomi</span>
+            <p>
+              A floating Android assistant with browser and terminal access.
+            </p>
+          </li>
+          <li data-reveal style="--delay: 200ms">
+            <span>Dissenter</span>
+            <p>
+              The original Android and standalone voice-command devices behind
+              Intent Remote.
+            </p>
+          </li>
+          <li data-reveal style="--delay: 270ms">
+            <span>Myriad and DeBio</span>
+            <p>
+              Earlier agent systems that shaped the reviewed-action workflow.
+            </p>
+          </li>
+        </ol>
+        <p class="roots-after" data-reveal>
+          The first pieces already work. The Android app can turn spoken
+          requests into reviewed Bluetooth commands. The standalone unit does
+          the same from a pocket-sized device. Current hardware experiments
+          explore what happens when the computer itself is built around that
+          interaction.
+        </p>
+      </section>
+
+      <section
+        class="closing-section motion-zone"
+        id="contact"
+        aria-labelledby="contact-title"
+        data-motion-zone
+      >
+        <div class="closing-ribbons" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="closing-inner" data-reveal>
+          <p class="section-kicker">What Would You Ask It To Do?</p>
+          <h2 id="contact-title">
+            An everyday computer, a portable development machine, or something
+            stranger?
+          </h2>
+          <p>
+            Intent Computer can be an accessibility device, a terminal for the
+            workshop, a laboratory helper, a classroom computer, or a quiet
+            voice-operated machine for the living room.
+          </p>
+          <div class="use-cases">
+            <span>Everyday computer</span>
+            <span>Portable development</span>
+            <span>Accessibility</span>
+            <span>Workshop</span>
+            <span>Laboratory</span>
+            <span>Classroom</span>
+          </div>
+          <div class="closing-actions" id="partner">
+            <a
+              class="button primary"
+              href="https://github.com/intentcomputer"
+              target="_blank"
+              rel="noreferrer"
+              >I want one</a
+            >
+            <a
+              class="button secondary"
+              href="https://github.com/intentcomputer"
+              target="_blank"
+              rel="noreferrer"
+              >Partner with Intent Computer</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Intent Computer starts with the job.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

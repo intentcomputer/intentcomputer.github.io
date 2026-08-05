@@ -1646,7 +1646,7 @@ h3 {
 
   .mini-use-copy {
     max-width: none;
-    padding: 3.8rem var(--page) 4.6rem;
+    padding: 3.8rem 12px 4.6rem;
   }
 
   .roots-copy {

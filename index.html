@@ -23,6 +23,13 @@
       type="image/webp"
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+      }
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -172,6 +179,10 @@
         aria-labelledby="computer-title"
         data-motion-zone
       >
+        <canvas
+          id="computer-scene"
+          aria-hidden="true"
+        ></canvas>
         <div class="section-heading" data-reveal>
           <p class="section-kicker">Intent Computer</p>
           <h2 id="computer-title">
@@ -319,6 +330,29 @@
             keyboard shortcuts, move through menus, and launch applications. It
             handles the voice input and keeps your provider credentials; the
             other machine receives ordinary keyboard and mouse actions.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="mini-use-section motion-zone"
+        aria-labelledby="mini-use-title"
+        data-motion-zone
+      >
+        <div class="mini-use-image" data-reveal>
+          <img
+            src="3d/assets/generated/mini-human-control.png"
+            alt="A person holding Intent Computer Mini while a television and laptop respond"
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+        </div>
+        <div class="mini-use-copy" data-reveal>
+          <p class="section-kicker">Intent Computer Mini / In the hand</p>
+          <h2 id="mini-use-title">The computer can stay small. The intent does not.</h2>
+          <p>
+            Hold the Mini, choose what you mean, and let the nearby screen do the work. The same tiny computer can move between a laptop, a television, or any device that accepts its Bluetooth signal.
           </p>
         </div>
       </section>
@@ -472,6 +506,7 @@
       <a href="#top">Back to top</a>
     </footer>
 
+    <script type="module" src="root-3d.js"></script>
     <script src="script.js" defer></script>
   </body>
 </html>

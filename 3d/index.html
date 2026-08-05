@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2efe8">
+  <title>Intent Computer Mini | Intent Computer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
+</head>
+<body>
+  <main>
+    <section class="hero" id="hero">
+      <canvas id="scene" aria-label="Animated Intent Computer Mini controlling a laptop and smart TV"></canvas>
+      <div class="hero-copy">
+        <p class="eyebrow">INTENT COMPUTER / MINI 01</p>
+        <h1>A small computer for the intent behind every click.</h1>
+        <p class="lede">Intent Computer Mini translates a thought into a command, then carries it over Bluetooth to the computer or device that can act on it.</p>
+        <a class="scroll-cue" href="#signal"><span></span> Explore the signal</a>
+      </div>
+      <div class="hero-status"><span class="live-dot"></span> BLE / READY <b>200 × 200</b></div>
+    </section>
+
+    <section class="signal band" id="signal">
+      <div class="section-intro">
+        <p class="eyebrow">01 / CONVEY</p>
+        <h2>Your intent, in motion.</h2>
+        <p>The Mini stays small. The world it can move through does not. Watch a simple signal travel from the e-paper computer to the screens around it.</p>
+      </div>
+      <div class="signal-readout"><span id="readoutAction">OPEN A NEW WINDOW</span><small>TRANSMITTING VIA BLUETOOTH</small></div>
+    </section>
+
+    <section class="devices band" id="devices">
+      <div class="section-intro">
+        <p class="eyebrow">02 / ANY COMPUTER</p>
+        <h2>One tiny surface. Every surface.</h2>
+        <p>TV, laptop, terminal, speaker, home device. The Mini is a controller for anything that understands its signal.</p>
+      </div>
+      <div class="device-strip" aria-label="Supported device examples">
+        <article class="device-card"><span class="device-icon tv-icon"></span><strong>SMART TV</strong><small>jump to a saved scene</small></article>
+        <article class="device-card"><span class="device-icon laptop-icon"></span><strong>LAPTOP</strong><small>open the next workspace</small></article>
+        <article class="device-card"><span class="device-icon terminal-icon"></span><strong>TERMINAL</strong><small>run the prepared command</small></article>
+        <article class="device-card"><span class="device-icon speaker-icon"></span><strong>DEVICE</strong><small>change the state</small></article>
+      </div>
+    </section>
+
+    <section class="human band">
+      <div class="human-image"><img src="./assets/generated/mini-human-control.png" alt="A person holding the Intent Computer Mini while a TV and laptop respond"></div>
+      <div class="human-copy"><p class="eyebrow">03 / IN THE HAND</p><h2>It feels like a thought, because it starts there.</h2><p>No phone between you and the action. Just a small, readable computer that makes your next move legible.</p><span class="mono-note">MINI / HELD AT TRUE SCALE</span></div>
+    </section>
+
+    <section class="closing band">
+      <p class="eyebrow">INTENT COMPUTER</p>
+      <h2>Make the computer listen to what you mean.</h2>
+      <p>Hardware for intent, built to meet whatever comes next.</p>
+      <a class="text-link" href="https://intentcomputer.org/" target="_blank" rel="noreferrer">Back to Intent Computer <span>↗</span></a>
+    </section>
+  </main>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

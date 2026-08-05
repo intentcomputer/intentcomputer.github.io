@@ -195,7 +195,6 @@ img {
   isolation: isolate;
 }
 
-.hero-media,
 .hero-media img,
 .hero-shade {
   position: absolute;
@@ -203,10 +202,16 @@ img {
 }
 
 .hero-media {
-  z-index: -3;
-  transform: translate3d(0, var(--parallax-y, 0px), 0)
-    scale(var(--hero-scale, 1.04));
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  opacity: var(--hero-image-opacity, 1);
+  transform: scale(1.025);
   transform-origin: center;
+  transition: opacity 120ms linear;
+  will-change: opacity;
+  pointer-events: none;
 }
 
 .hero-media img {
@@ -217,24 +222,27 @@ img {
 }
 
 .hero-shade {
-  z-index: -2;
+  z-index: 1;
   background:
     linear-gradient(
       90deg,
-      rgba(255, 248, 235, 0.98) 0%,
-      rgba(255, 248, 235, 0.9) 33%,
-      rgba(255, 248, 235, 0.42) 58%,
+      rgba(255, 248, 235, 0.82) 0%,
+      rgba(255, 248, 235, 0.7) 33%,
+      rgba(255, 248, 235, 0.28) 58%,
       rgba(255, 248, 235, 0.08) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(255, 248, 235, 0.6) 0%,
-      rgba(255, 248, 235, 0.1) 54%,
-      rgba(255, 248, 235, 0.78) 100%
+      rgba(255, 248, 235, 0.42) 0%,
+      rgba(255, 248, 235, 0.08) 54%,
+      rgba(255, 248, 235, 0.58) 100%
     );
+  pointer-events: none;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 3;
   width: var(--page);
   margin: 0 auto;
   max-width: 680px;
@@ -243,7 +251,7 @@ img {
 .intent-packets {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -462,7 +470,7 @@ h3 {
 .hero-path {
   left: 6%;
   bottom: 16%;
-  z-index: -1;
+  z-index: 2;
   width: min(520px, 52vw);
   height: 120px;
   opacity: 0.42;
@@ -1480,6 +1488,7 @@ h3 {
     grid-template-columns: 1fr auto;
     top: 10px;
     padding: 8px 9px 8px 12px;
+    background: rgba(255, 253, 247, 0.74);
   }
 
   .site-nav nav {
@@ -1503,20 +1512,35 @@ h3 {
     background:
       linear-gradient(
         180deg,
-        rgba(255, 248, 235, 0.97) 0%,
-        rgba(255, 248, 235, 0.88) 42%,
-        rgba(255, 248, 235, 0.48) 100%
+        rgba(255, 248, 235, 0.68) 0%,
+        rgba(255, 248, 235, 0.46) 42%,
+        rgba(255, 248, 235, 0.18) 100%
       ),
       linear-gradient(
         90deg,
-        rgba(255, 248, 235, 0.94),
-        rgba(255, 248, 235, 0.42)
+        rgba(255, 248, 235, 0.58),
+        rgba(255, 248, 235, 0.16)
       );
   }
 
   .hero-content {
     width: var(--page);
     max-width: none;
+  }
+
+  .hero-content h1,
+  .hero-lede,
+  .hero-copy {
+    text-shadow: 0 1px 18px rgba(255, 253, 247, 0.86);
+  }
+
+  .hero .button.primary {
+    background: rgba(23, 33, 43, 0.94);
+  }
+
+  .hero .button.secondary,
+  .hero-command {
+    background: rgba(255, 255, 255, 0.66);
   }
 
   h1 {

@@ -8,6 +8,7 @@ const parallaxLayers = Array.from(
   document.querySelectorAll("[data-parallax-speed]"),
 );
 const heroMedia = document.querySelector(".hero-media");
+const hero = document.querySelector(".hero");
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 );
@@ -149,18 +150,17 @@ const updateParallax = () => {
     const y = (progress - 0.5) * speed * 2;
     layer.style.setProperty("--parallax-y", `${y.toFixed(1)}px`);
   });
+};
 
-  if (heroMedia) {
-    const heroProgress = Number(
-      document
-        .querySelector(".hero")
-        ?.style.getPropertyValue("--zone-progress") || 0,
-    );
-    heroMedia.style.setProperty(
-      "--hero-scale",
-      (1.065 - heroProgress * 0.032).toFixed(3),
-    );
+const updateHeroImage = () => {
+  if (!heroMedia || !hero) {
+    return;
   }
+
+  const fadeStart = 24;
+  const fadeDistance = Math.max(hero.offsetHeight * 0.92, window.innerHeight);
+  const opacity = clamp(1 - (window.scrollY - fadeStart) / fadeDistance);
+  heroMedia.style.setProperty("--hero-image-opacity", opacity.toFixed(3));
 };
 
 const setActiveNav = () => {
@@ -191,6 +191,7 @@ const onScroll = () => {
     updateScrollMeter();
     updateMotionZones();
     updateParallax();
+    updateHeroImage();
     setActiveNav();
     ticking = false;
   });
